@@ -14,10 +14,10 @@ Blender can be downloaded from the [official website](https://www.blender.org/do
 - Python
 
 ## Contents
-- `2D_extraction.py`: Extracts 2D joint data.
-- `3D_extraction.py`: Converts .fbx files to .npz files containing 3D joint data.
+- `3D_extraction.py`: Converts .fbx files to .npz files containing 3D joint data. 
 - `camParams.py`: Extracts camera parameters used in the animations.
-- `occlusion.py`: Simulates occlusions in the data.
+- `2D_extraction.py`: Extracts 2D joint data by projecting the 3D joint data onto 2D space using camera parameters.
+- `occlusion.py`: Determines the presence of occlusions in the dataset.
 - `fbx2jason/`: Intended for storing .fbx files converted to JSON.
 - `regular/`: Default directory for placing sample .fbx files.
 
@@ -28,7 +28,7 @@ Blender can be downloaded from the [official website](https://www.blender.org/do
 ## Usage Instructions
 
 ### General Usage
-Before running the scripts, download a sample .fbx file from Mixamo ([link](https://www.mixamo.com/#/?page=1&type=Motion%2CMotionPack)) and place it into the `regular` folder.
+Before running the scripts, download a sample .fbx file from your Blender animation ([link](https://www.immersivelimit.com/tutorials/export-animations-from-blender-to-unreal-engine)) and place it into the `regular` folder.
 
 ### 3D Data Extraction
 1. Move the .fbx file to the `regular` folder.
@@ -36,28 +36,28 @@ Before running the scripts, download a sample .fbx file from Mixamo ([link](http
 3. Change to the directory containing `3D_extraction.py`.
 4. Execute the script with the following command:
    ```
-   blender --background -P 3D_extraction.py -- --joint-id 8 --armature-name Armature.001 --subject S1
+   blender --background -P 3D_extraction.py -- --joint-id 8 --armature-name Armature --subject S1
    ```
 
 ### Camera Parameters Extraction
 1. Change to the directory containing `camParams.py`.
 2. Execute the script with the following command:
    ```
-   blender --background H3.6M.blend --python camParams.py -- S1
+   blender --background animation.blend --python camParams.py -- S1
    ```
 
 ### 2D Data Conversion
 1. Change to the directory containing `2D_extraction.py`.
 2. Execute the script with the following command:
    ```
-   blender --background H3.6M.blend --python 2D_extraction.py -- S1 WalkCircle
+   blender --background animation.blend --python 2D_extraction.py -- S1 action_name
    ```
 
 ### Occlusion Handling
 1. Change to the directory containing `occlusion.py`.
 2. Execute the script with the following command:
    ```
-   blender --background H3.6M.blend --python occlusion.py -- --joint-id 8 --armature-name Armature.001 --subject S1
+   blender --background animation.blend --python occlusion.py -- --joint-id 8 --armature-name Armature --subject S1
    ```
 
 ## Contributing
