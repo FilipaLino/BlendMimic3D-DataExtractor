@@ -2,7 +2,7 @@
 
 ## Overview
 
-The BlendMimic3D-DataExtractor is designed to convert .fbx files to .npy format, specifically for human motion analysis. It was instrumental in generating [BlendMimic3D](https://github.com/FilipaLino/BlendMimic3D) dataset from our project. For more detailed information about to our project please visit our [project webpage](https://filipalino.github.io/filipalino.github.io-BlendMimic3D/).
+The BlendMimic3D-DataExtractor is designed to convert .fbx files to .npy format, specifically for human motion analysis. It was instrumental in generating [BlendMimic3D](https://github.com/FilipaLino/BlendMimic3D) dataset from our project. For more detailed information about to our project please visit our [project webpage](https://blendmimic3d.github.io/BlendMimic3D/).
 
 This repository contains scripts that require Blender to run.
 <p align="left">
