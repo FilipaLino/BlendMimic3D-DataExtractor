@@ -69,7 +69,13 @@ Contributions are welcome. Please open an issue or submit a pull request with yo
 ## Citation
 If you use our code in your research, please cite our paper: 
 ```
-[ citation format]
+@inproceedings{lino20243d,
+  title={3D Human Pose Estimation with Occlusions: Introducing BlendMimic3D Dataset and GCN Refinement},
+  author={Lino, Filipa and Santiago, Carlos and Marques, Manuel},
+  booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
+  pages={4646--4656},
+  year={2024}
+}
 ```
 
 ## Aknowledgements
